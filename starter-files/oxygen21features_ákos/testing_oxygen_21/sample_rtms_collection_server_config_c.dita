@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wsy_n3h_2p">
+ <title>Collection Server configuration</title>
+ <shortdesc>The following is a sample <codeph>rtms.properties</codeph> file for a <keyword>HPE
+   RTMS</keyword> Collection Server configuration:</shortdesc>
+ <prolog>
+  <metadata>
+   <prodinfo>
+    <prodname/>
+    <vrmlist>
+     <vrm version=""/>
+    </vrmlist>
+   </prodinfo>
+  </metadata>
+ </prolog>
+ <conbody>
+  <screen status="new">#SNMP Entity# 
+# Configure the SNMP transport listen address
+listenIpAddress=0.0.0.0
+# Configure the SNMP transport listen port
+listenPort=161
+# Configure the retry counter for the SNMP Commands
+commandRetryCounter=5 
+#Thread Pool Size
+threadPool=25
+# Communication fails then SNMP retries count to connect with SNMP Agent 
+retriesCount = 3 
+# Communication fails then SNMP retries count to connect with SNMP Agent in milliseconds 
+retriesTimeOut = 3000</screen>
+ </conbody>
+</concept>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_gvy_yhz_4r">
+  <title>Linux</title>
+  <shortdesc></shortdesc>
+  <prolog>
+    <author/>
+    <metadata>
+      <prodinfo>
+        <prodname/>
+        <vrmlist>
+          <vrm version=""/>
+        </vrmlist>
+        <component/>
+        <featnum/>
+      </prodinfo>
+    </metadata>
+  </prolog>
+  <refbody>
+    <section><uicontrol>OS Version</uicontrol><p>HOCOE Linux server release 7.7</p><p>Telco CLIM OS
+        version</p><ul id="ul_drn_lk2_pkb">
+        <li>NB series: Version ACV</li>
+        <li>NX series: Version BAC</li>
+      </ul></section>
+  </refbody>
+</reference>
