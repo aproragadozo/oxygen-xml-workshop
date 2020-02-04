@@ -1,0 +1,12 @@
+.conref {
+    background: tomato;
+    padding: 0.5em;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+.keyword {
+    font-size: 2em;
+    color: tomato;
+}
