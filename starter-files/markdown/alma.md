@@ -1,3 +1,7 @@
+---
+id: alma-alma
+---
+
 # Headings
 
 The first paragraph is the *implied* ***short description*** element.
@@ -68,7 +72,7 @@ alma(65);
 
 ## Ordered
 
-1. <p data-conref="barack.md#barack/content"></p>
+1. <p data-conref="dio.md#dio-dio/content"></p>
 
 2. Two.
 
@@ -80,4 +84,4 @@ alma(65);
 
 The paragraph below is being pulled in here from another file referenced by the same ditamap.
 
-<p class="conref" data-conref="barack.md#barack/content"></p>
+<p class="conref" data-conref="dio.md#dio-dio/content"></p>
