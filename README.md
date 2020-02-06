@@ -11,7 +11,7 @@ Placeholder content for now.
 | | | smart paste all options - task that shows every option | | https://www.oxygenxml.com/doc/versions/21.1/ug-editor/topics/smart-paste-support-x-modes2.html | Ákos | | |
 | | | When copying a multiple selection of table cells and pasting them outside the table, a new table will be created. When pasting into space-preserved elements, the cell content will be pasted as plain text. | | | Ákos | | |
 | 10:00-10:30 | Git support | git support - similar to github desktop functions | Demo |https://www.oxygenxml.com/doc/versions/21.1/ug-editor/topics/git-addon.html| BBalázs | | |
-| | | 3 way difference | | | BBalázs | |handling merge conflicts in Oxygen|
+| | | 3 way difference | Demo | https://github.com/oxygenxml/oxygen-git-plugin | BBalázs | |handling merge conflicts in Oxygen|
 | 10:30-10:45 | Break | | | | | | |
 | 10:45-12:15 | Topics and hierarchy 1. | Convert DITA topic sections into standalone topics. | Demo + Exercise | https://www.oxygenxml.com/doc/versions/20.0/ug-editor/topics/dita-maps-manager.html#dita-maps-manager__refactoring-dlentry | Ákos | word-ből konvertálós feladat? heading - section - topic - ditamap | először megmutatni és utáni mindenki maga megcsinálja |
 | | | Converting DITA Topics to Another Type | | https://www.oxygenxml.com/doc/versions/19.1/ug-editor/topics/dita-convert-topics.html| Ákos | | |
