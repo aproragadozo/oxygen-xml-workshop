@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>MAPPA</title>
+    <topicref href="alma.md" format="mdita"/>
+    <topicref href="barack.md" format="mdita"/>
+    <topicref href="cekla.dita" format="dita"/>
+    <topicref href="dio.md" format="mdita"/>
+    <?oxy_insert_start author="BalázsBujna" timestamp="20200204T130016+0100"?>
+    <keydef keys="flavor">
+        <topicmeta>
+            <keywords>
+                <keyword>Strawberry</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="size">
+        <topicmeta>
+            <keywords>
+                <keyword>M</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="vehicle">
+        <topicmeta>
+            <keywords>
+                <keyword>hovercraft</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="cargo">
+        <topicmeta>
+            <keywords>
+                <keyword>eels</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <?oxy_insert_end?>
+</map>
+
+<?oxy_options track_changes="on"?>

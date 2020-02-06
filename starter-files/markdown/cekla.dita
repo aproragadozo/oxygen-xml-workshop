@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cekla">
+    <title>Cekla</title>
+    <body>
+        <?oxy_delete author="BalázsBujna" timestamp="20200206T135618+0100" content="&lt;p&gt;Guests can read data but are not allowed to create new database objects or edit them. Guests will not be able to see the database objects with a visibility status set to &lt;i&gt;Reader&lt;/i&gt;, &lt;i&gt;Group&lt;/i&gt;, or &lt;i&gt;Project&lt;/i&gt; if no status ( Reader/Updater) has been assigned to them. Similarly, guests can view the Lemma list and the Thesaurus database, but not modify them. &lt;/p&gt;&lt;p&gt;Do I need to turn on tracked changes separately for each DITA file, or is tracking the changes to the parent map enough?&lt;/p&gt;"?>
+        <?oxy_insert_start author="BalázsBujna" timestamp="20200206T135618+0100"?>
+        <p>This file only exists to demonstrate that .dita and .md files may be freely mixed below
+            the same .ditamap.</p>
+        <?oxy_insert_end?>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>
