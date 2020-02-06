@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="support_file">
+ <title>Support file</title>
+ <shortdesc></shortdesc>
+ <prolog>
+  <author/>
+  <metadata>
+   <prodinfo>
+    <prodname/>
+    <vrmlist>
+     <vrm version=""/>
+    </vrmlist>
+    <component/>
+    <featnum/>
+   </prodinfo>
+  </metadata>
+ </prolog>
+ <refbody><section><p>SUPPORT COMMUNICATION - SECURITY BULLETIN </p><p><b>Document ID: </b>hpesbmu03895en_us</p><p><b>Version: </b>1</p><p> HPESBMU03895 rev.1 - HPE Real Time Management System (RTMS), Multiple Remote Security Issues
+    <b>NOTICE:</b> The information in this Security Bulletin should be acted upon as soon as
+   possible. </p><p><b>Release Date: </b>2018-10-25</p><p><b>Last Updated: </b>2018-10-25</p><p><b>Potential Security Impact: </b> Remote: Arbitrary File Modification, Execution of Arbitrary
+   Code, Execution of Arbitrary Code With Root Privileges </p><p><b>Source:</b> Hewlett Packard Enterprise, HPE Product Security Response Team</p></section><section id="section_i3b_t4b_qkb">
+   <title>VULNERABILITY SUMMARY</title>
+   <p>HPE Real Time Management System (RTMS), versions
+    2.0,3.0,3.0.14,3.0.20,3.0.21,3.0.30,3.0.40,3.0.41 are vulnerable to remote Arbitrary file
+    modification, execution of code, and execution of code with root privileges.</p>
+   <p><i>Note:</i> The problem is addressed in the latest version of RTMS 3.0.50. No patches or
+    updates are available for prior releases.</p>
+   <p><b>References: </b> CVE-2018-1002202 - Note: This is a worst case score, based on service
+    being installed and running as root </p>
+  </section><section id="section_j3b_t4b_qkb">
+   <title>SUPPORTED SOFTWARE VERSIONS*: ONLY impacted versions are listed.</title>
+   <p>HPE Real Time Management System (RTMS) - 2.0,3.0,3.0.14,3.0.20,3.0.21,3.0.30,3.0.40,3.0.41 -
+    All existing versions are affected, No patches or updates are available for prior releases.</p>
+  </section><section id="section_k3b_t4b_qkb">
+   <title>BACKGROUND</title>
+   <p> CVSS Version 3.0 and Version 2.0 Base Metrics</p>
+   <table id="table_x3b_t4b_qkb">
+    <tgroup cols="5">
+     <colspec colnum="1" colname="col1"/>
+     <colspec colnum="2" colname="col2"/>
+     <colspec colnum="3" colname="col3"/>
+     <colspec colnum="4" colname="col4"/>
+     <colspec colnum="5" colname="col5"/>
+     <thead>
+      <row>
+       <entry>Reference</entry>
+       <entry> V3 Vector </entry>
+       <entry> V3 Base Score </entry>
+       <entry> V2 Vector </entry>
+       <entry> V2 Base Score </entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>CVE-2018-1002202</entry>
+       <entry> CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H </entry>
+       <entry> 8.8 </entry>
+       <entry> (AV:N/AC:L/Au:S/C:C/I:C/A:C) </entry>
+       <entry> 9.0 </entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </table>
+   <p> Information on CVSS is documented in HPE Customer Notice: HPSN-2008-002 </p>
+  </section><section><p></p></section></refbody>
+</reference>

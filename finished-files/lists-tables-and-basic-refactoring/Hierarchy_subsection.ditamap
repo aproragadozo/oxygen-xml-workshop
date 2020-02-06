@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title/>
+    <topicref href="testing_oxygen_21/hierarchy_subsection_c.dita">
+        <topicref href="testing_oxygen_21/first_level_c.dita">
+            <topicref href="testing_oxygen_21/second_level_c.dita"/>
+            <topicref href="testing_oxygen_21/second_level_ii_c.dita"/>
+            <topicref href="testing_oxygen_21/second_level_iii_c.dita"/>
+        </topicref>
+        <topicref href="testing_oxygen_21/first_level_ii_c.dita">
+            <topicref href="testing_oxygen_21/second_level_iv_c.dita">
+                <topicref href="testing_oxygen_21/third_level_c.dita"/>
+                <topicref href="testing_oxygen_21/third_level_ii_c%20-%20Copy.dita"/>
+            </topicref>
+        </topicref>
+    </topicref>
+</map>

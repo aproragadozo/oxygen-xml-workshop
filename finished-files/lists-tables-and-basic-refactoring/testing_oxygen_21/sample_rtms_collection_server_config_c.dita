@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="concept_wsy_n3h_2p">
+ <title>Collection Server configuration</title>
+ <shortdesc>The following is a sample <codeph>rtms.properties</codeph> file for a <keyword>HPE
+   RTMS</keyword> Collection Server configuration:</shortdesc>
+ <prolog>
+  <metadata>
+   <prodinfo>
+    <prodname/>
+    <vrmlist>
+     <vrm version=""/>
+    </vrmlist>
+   </prodinfo>
+  </metadata>
+ </prolog>
+ <refbody><section><screen status="new">#SNMP Entity# 
+# Configure the SNMP transport listen address
+listenIpAddress=0.0.0.0
+# Configure the SNMP transport listen port
+listenPort=161
+# Configure the retry counter for the SNMP Commands
+commandRetryCounter=5 
+#Thread Pool Size
+threadPool=25
+# Communication fails then SNMP retries count to connect with SNMP Agent 
+retriesCount = 3 
+# Communication fails then SNMP retries count to connect with SNMP Agent in milliseconds 
+retriesTimeOut = 3000
+hardwireOperating system 
+DL380p or BL460c Series server with the following configuration:2 x 8 core Gen8 CPU clocked at 2.6GHz or better64 GB or higher RAM6 x 1.2 TB 10K RPM Hard Disks configured in RAID 62 x 1 Gbps NIC cards
+For BL460c series servers, the number of disks in a blade is limited. This limits the total number of nodes that can be monitored by RTMS unless complimented with a storage blade and/or a disk array, which is used for the database storage.
+Virtual machines
+Recommended configuration of VMs:20 vCPUs, 64 GB RAM and 1 TB ROM6 vCPUs, 32 GB RAM and 1 TB ROM4 vCPUs, 16 GB RAM and 1 TB ROM
+Specification of servers used for creating VMs:hardwire Type: ProLiant DL380p Gen8Number of CPU’s: 2CPU Type: Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz with 8 CoresRAM: 128 GBHypervisor: ESXi 6.5
+CPU locking is ensured in all the VM configuration.
+IP requirementsFor HA deployment, two additional floating IPs are require for the following IPs:Virtual_IP - Used for pacemakerDelegate_IP - Used for database connection and replication
+HOCOE version JA286-15048 (RHEL 7.5 - 64 Bit)</screen></section></refbody>
+</reference>

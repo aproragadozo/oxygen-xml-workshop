@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="section_pvp_vnb_qkb">
+   <title>
+      <ph id="_Toc30015757">Workflow Nodes</ph>
+   </title>
+   <body>
+            
+            <p>Workflow nodes carry out the work of a workflow. You should notice that a node always
+                has a <i>&amp;lt;Name&gt;</i>
+         <codeph/>and an <i>&amp;lt;Action&gt;</i>. The <i>&amp;lt;Name&gt;</i>,
+                which is unique within the workflow, is simply the handle to this node within the
+                workflow. The <i>&amp;lt;Action&gt;</i>
+         <codeph/>is what defines the behavior of the step in
+                the workflow.</p>
+            <p>Aworkflow node has one optional attribute disablePersistence. If this attribute is
+                set to “<i>true</i>” no persistence will be done after the processing of the node.
+                The default is “<i>false</i>”. If persistence is done a boble will be displayed in
+                the upper left corner of the icon of the node in the Workflow Designer.</p>
+            <p>Hereis an example of how the the attribute is used:</p>
+            <p>&amp;lt;Rule-NodedisablePersistence="true"&gt;</p>
+            <p>All nodes delivered with HPE Service Activator are configured with a default
+                behaviour. The general behavior of Process Nodes is to persist where the Rule and
+                Switch Nodes do not persist. A table about which nodes persist can be found in a
+                table before the description of each node.</p>
+            <p>Thegeneral behavior of the node is indicated by the
+                <i>&amp;lt;Action&gt;&amp;lt;Class-Name&gt;</i>
+         <codeph/>tag. This indicates a Java class that
+                implements the behavior of the node. Although each node has a general behavior, it
+                must usually be configured for the specific behavior that should occur at a given
+                step in the workflow. This specific behavior is specified in the parameters of the
+                action. Each parameter has a name and a value. For example, a parameter with the
+                name “<i>task</i>” is used by the <i>Activate</i>
+         <codeph/>node. The value of the
+                    <codeph>task</codeph> parameter is the name of the atomic or compound task to be
+                activated. Each node class supports a different set of parameters. These parameters
+                are described in detail in<xref href="#./_bookmark36">Chapter 4</xref>.</p>
+            <p>Thereare three categories of nodes:</p>
+            <ul id="ul_xvp_vnb_qkb">
+                <li>Process nodes perform activities such as querying the inventory, asking a human
+                    operator for information, invoking the activation of a compound task, and so on.
+                    They are represented as rectangles in the Workflow Designer.</li>
+                <li>Rule nodes are the decision nodes that branch the workflow depending on given
+                    conditions. For example, if a given condition is true, the workflow branches one
+                    direction; if false, it branches a different direction. Rule nodes are depicted
+                    as diamonds in the Workflow Designer.</li>
+                <li>Switch nodes are very similar to Rule nodes. A switch node can have multiple
+                    branches but requires at least a default branch. The switch node evaluates its
+                    expression and executes the appropriate case where case is the same as a branch.
+                    For example, if a given expression evaluates to 5, the workflow select the case
+                    with the value 5; if a case cannot be found the default branch is selected.
+                    Switch nodes are depicted as parallelograms in the Workflow Designer.</li>
+            </ul>
+        </body>
+</topic>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="section_awp_vnb_qkb">
+   <title>Test Process Nodes</title>
+   <body>
+            
+            <p>Very similar to Inactive Procccess Nodes. The difference is that the process node is
+                skipped if the parameter Test-Mode is set to false in the mwfm.xml configuration
+                file and executed if set to true. The syntax for this is:</p>
+            <p>&amp;lt;Process-Nodetest="true"&gt;</p>
+            <p>Thiscan be accomplished in the Workflow Designer, by setting the Test Node flag in
+                the context sensitive pop-up menu associated with a node.</p>
+        </body>
+</topic>
