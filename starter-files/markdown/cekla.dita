@@ -3,23 +3,10 @@
 <topic id="cekla">
     <title>Cekla</title>
     <body>
-        <p>Guests can read data but are not allowed to create new database objects or edit them.
-            <?oxy_delete author="BalázsBujna" timestamp="20200113T163109+0100" content="Guests"?><?oxy_insert_start author="BalázsBujna" timestamp="20200113T163109+0100"?>Creatures<?oxy_insert_end?>
-            will not be able to see the database objects with a visibility status set to
-                <i>Reader</i>, <i>Group</i>, or <i>Project</i> if no status ( Reader/Updater) has
-            been assigned to them.
-            <?oxy_comment_start author="BalázsBujna" timestamp="20200113T164409+0100" comment="A comment this is."?>Similarly<?oxy_comment_end?>,
-            guests can view the Lemma list and the Thesaurus
-            database<?oxy_delete author="BalázsBujna" timestamp="20200113T163119+0100" content=", but not modify them"?>. </p>
-        <p>Do I need to turn on tracked changes separately for each DITA file, or is tracking the
-            changes to the parent map enough?</p>
-        <?oxy_insert_start author="BalázsBujna" timestamp="20200113T162551+0100"?>
-        <p>Turns out I need to turn on tracked changes for each file separately.</p>
-        <p>Bummer.<fig id="fig_bdr_rkj_jkb">
-                <title>Another space invader cannot hurt</title>
-                <image placement="break" href="images/space-invader.jpg" align="center"
-                    id="image_cdr_rkj_jkb"/>
-            </fig></p>
+        <?oxy_delete author="BalázsBujna" timestamp="20200206T135618+0100" content="&lt;p&gt;Guests can read data but are not allowed to create new database objects or edit them. Guests will not be able to see the database objects with a visibility status set to &lt;i&gt;Reader&lt;/i&gt;, &lt;i&gt;Group&lt;/i&gt;, or &lt;i&gt;Project&lt;/i&gt; if no status ( Reader/Updater) has been assigned to them. Similarly, guests can view the Lemma list and the Thesaurus database, but not modify them. &lt;/p&gt;&lt;p&gt;Do I need to turn on tracked changes separately for each DITA file, or is tracking the changes to the parent map enough?&lt;/p&gt;"?>
+        <?oxy_insert_start author="BalázsBujna" timestamp="20200206T135618+0100"?>
+        <p>This file only exists to demonstrate that .dita and .md files may be freely mixed below
+            the same .ditamap.</p>
         <?oxy_insert_end?>
     </body>
 </topic>

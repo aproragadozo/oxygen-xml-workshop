@@ -10,3 +10,8 @@
     font-size: 2em;
     color: tomato;
 }
+.wh_main_page .wh_search_input {
+    background-image: url('./images/mike-von-invader.jpg') !important;
+    background-size: cover;
+    background-position-y: -45vh;
+}
