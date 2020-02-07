@@ -8,7 +8,8 @@
         <p>This file only exists to demonstrate that .dita and .md files may be freely mixed below
             the same .ditamap.</p>
         <codeblock>function foo() {
-    return "dfghjkl";
+    let a = 5;
+    return a;
 }</codeblock>
         <?oxy_insert_end?>
     </body>
