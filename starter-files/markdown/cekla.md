@@ -8,6 +8,6 @@ Yet another interesting topic. <p>With a footnote!<a href="one"><sup>1</sup></a>
 
 ## Heading
 
-<!--- HTML comment.--->
+<!-- HTML comment.-->
 
 <div id="one" data-class="fn" data-type="notice"><p>This is the bit where footnote number one is expanded.</p></div>
