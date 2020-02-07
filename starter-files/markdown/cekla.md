@@ -6,7 +6,7 @@ id: this-has-an-id-also
 
 Yet another interesting topic. <p>With a footnote!<a href="one"><sup>1</sup></a></p>
 
-## Heading
+## HEADING!
 
 <!-- HTML comment.-->
 
