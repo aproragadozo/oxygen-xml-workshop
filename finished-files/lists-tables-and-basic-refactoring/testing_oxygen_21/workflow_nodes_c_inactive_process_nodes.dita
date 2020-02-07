@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="section_zvp_vnb_qkb">
+   <title>Inactive Process Nodes</title>
+   <body>
+            
+            <p>Without changing the structure of a workflow you can tell the Workflow Manager to
+                skip over individual process nodes in the workflow. This may be helpful during
+                development when testing your workflows. It may also be helpful after development is
+                completed and you want to eliminate some processing from the workflow that is not
+                necessary when the workflow is running in a production environment. The syntax for
+                thisis:</p>
+            <p>&amp;lt;Process-Nodeinactive="true"&gt;</p>
+            <p>Thiscan be accomplished in the Workflow Designer, by setting the Inactive Node flag
+                in the context sensitive pop-up menu associated with a node.</p>
+        </body>
+</topic>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="section_bwp_vnb_qkb">
+   <title>
+      <ph id="_Toc30015759">Rule Node</ph>
+   </title>
+   <body>
+            
+            <p>Thegeneral structure of a Rule Node definition in a workflow looks like this:</p>
+            <p>&amp;lt;Rule-NodedisablePersistence="true"&gt;</p>
+            <p> &amp;lt;Name&gt;CheckSuccess&amp;lt;/Name&gt;</p>
+            <p> &amp;lt;Action&gt;</p>
+            <p> &amp;lt;Class-Name&gt;</p>
+            <p> com.hp.ov.activator.mwfm.component.builtin.Equal</p>
+            <p> &amp;lt;/Class-Name&gt;</p>
+            <p> &amp;lt;Param name="op0" value="RET_VALUE<codeph>”</codeph>/&gt;</p>
+            <p> &amp;lt;Param name="op1" value="constant:0"/&gt;</p>
+            <p> &amp;lt;/Action&gt;</p>
+            <p> &amp;lt;True-Next-Node&gt;CheckSuccess&amp;lt;/True-Next-Node&gt;</p>
+            <p> &amp;lt;False-Next-Node&gt;CheckSuccess&amp;lt;/False-Next-Node&gt;</p>
+            <p>&amp;lt;/Rule-Node&gt;</p>
+            <p>Thestructure of a Rule Node is similar to a Process Node. The distinction is that a
+                Rule Node must have a <i>&amp;lt;True-Next-Node&gt;</i>
+         <codeph/>and a
+                    <i>&amp;lt;False-Next-Node&gt;</i>
+         <codeph/>to indicate which node should be processed
+                next in the flow depending on the outcome of the test.</p>
+            <p>Rulenodes may not have a <i>&amp;lt;Role&gt;</i>
+         <codeph/>tag.</p>
+        </body>
+</topic>

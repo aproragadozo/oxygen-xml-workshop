@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Testing_oxygen_21</title>
+    <topicref href="testing_oxygen_21/requirements_c.dita">
+        <topicref href="testing_oxygen_21/software_matrix_for_hpe_rtms_monitored_entities_c.dita">
+            <topicref href="testing_oxygen_21/nsk_sys_req_r.dita"/>
+            <topicref href="testing_oxygen_21/linux_sys_req_r.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="testing_oxygen_21/workflow_nodes_c.dita">
+        <topicref href="testing_oxygen_21/workflow_nodes_c_process_nodes.dita">
+            <topicref href="testing_oxygen_21/workflow_nodes_c_inactive_process_nodes.dita"/>
+            <topicref href="testing_oxygen_21/workflow_nodes_c_test_process_nodes.dita"/>
+        </topicref>
+        <topicref href="testing_oxygen_21/workflow_nodes_c_rule_node.dita"/>
+        <topicref href="testing_oxygen_21/workflow_nodes_c_switch_nodes.dita"/>
+    </topicref>
+    <topicref href="Hierarchy_subsection.ditamap" format="ditamap"/>
+    <topicref href="testing_oxygen_21/sample_configuration_c.dita">
+        <topicref href="testing_oxygen_21/sample_rtms_collection_server_config_c.dita"/>
+        <topicref href="testing_oxygen_21/support_file.dita"/>
+        <topicref href="testing_oxygen_21/from_github_source.dita"/>
+    </topicref>
+</map>

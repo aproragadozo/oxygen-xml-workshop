@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="section_yvp_vnb_qkb">
+   <title>
+      <ph id="_Ref445333733">Process Nodes</ph>
+   </title>
+   <body>
+            
+            <p>The general structure of a Process Node definition in a workflow looks like this:</p>
+            <p>&amp;lt;Process-Node&gt;</p>
+            <p> &amp;lt;Name&gt;Create a new directory&amp;lt;/Name&gt;</p>
+            <p> &amp;lt;Action&gt;</p>
+            <p> &amp;lt;Class-Name&gt;</p>
+            <p> com.hp.ov.activator.mwfm.engine.component.builtin.Activate</p>
+            <p> &amp;lt;/Class-Name&gt;</p>
+            <p> &amp;lt;Param name="task" value="UXOS_addDir"/&gt;</p>
+            <p> &amp;lt;Param name="param0" value="machine"/&gt;</p>
+            <p> &amp;lt;Param name="param1" value="dirname"/&gt;</p>
+            <p> &amp;lt;Param name="param2" value="login"/&gt;</p>
+            <p> &amp;lt;Param name="param3" value="constant:users"/&gt;</p>
+            <p> &amp;lt;Param name="param4" value="constant:775"/&gt;</p>
+            <p> &amp;lt;Param name="param5" value="tarfile"/&gt;</p>
+            <p> &amp;lt;/Action&gt;</p>
+            <p>&amp;lt;/Process-Node&gt;</p>
+            <p>Processnodes optionally have a <i>&amp;lt;Role&gt;</i>, <i>&amp;lt;State&gt;</i>, and a
+                    <i>&amp;lt;Next-Node&gt;</i>
+         <codeph/>tag. The role indicates which user or users can
+                interact with the node or receive messages from the node. The role of a node
+                overrides the <i>Default-Role</i>
+         <codeph/>setting in the workflow. Setting the role
+                of a node is only meaningful if the node performs some user interaction or sends a
+                message. The state of a node is a value that can be used to group a set of workflow
+                nodes into coarse-grained states. The <i>&amp;lt;Next-Node&gt;</i>
+         <codeph/>tag indicates
+                which node in the workflow will be processed after this one. If no
+                    <i>&amp;lt;Next-Node&gt;</i>
+         <codeph/>tag is present, then this node represents an end
+                node of the workflow.</p>
+        </body>
+</topic>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_isy_whz_4r">
+ <title>System requirements</title>
+ <shortdesc>This section explains the prerequisites to install <keyword id="Product_name_short">HPE
+   RTMS</keyword> on a system.</shortdesc>
+ <prolog>
+  <author/>
+  <metadata>
+   <prodinfo>
+    <prodname/>
+    <vrmlist>
+     <vrm version=""/>
+    </vrmlist>
+    <component/>
+    <featnum/>
+   </prodinfo>
+  </metadata>
+ </prolog>
+ <conbody>
+  <ul id="ul_psz_1qb_qv">
+   <li>The following table summarizes the hardwire, software, and operating system requirements:
+     <table frame="all" id="table_hck_btc_pr">
+     <title>hardwire, software, and operating system requirements</title>
+     <tgroup cols="2">
+      <colspec colname="c1" colnum="1" colwidth="2.44*"/>
+      <colspec colname="c2" colnum="2" colwidth="1*"/>
+      <thead>
+       <row>
+        <entry>hardwire</entry>
+        <entry>Operating system </entry>
+       </row>
+      </thead>
+      <tbody>
+       <row>
+        <entry>DL380p or BL460c Series server with the following configuration:<ul
+          id="ul_ewt_qfc_pr">
+          <li>2 x 8 core Gen8 CPU clocked at 2.6GHz or better</li>
+          <li>64 GB or higher RAM</li>
+          <li>6 x 1.2 TB 10K RPM Hard Disks configured in RAID 6</li>
+          <li>2 x 1 Gbps NIC cards</li>
+         </ul><note>For BL460c series servers, the number of disks in a blade is limited. This
+          limits the total number of nodes that can be monitored by RTMS unless complimented with a
+          storage blade and/or a disk array, which is used for the database
+           storage.</note><p><uicontrol>Virtual machines</uicontrol></p><p>Recommended configuration
+          of VMs:<ul id="ul_yh3_4vm_2db">
+           <li>20 vCPUs, 64 GB RAM and 1 TB ROM</li>
+           <li>6 vCPUs, 32 GB RAM and 1 TB ROM</li>
+           <li>4 vCPUs, 16 GB RAM and 1 TB ROM</li>
+          </ul></p><p>Specification of servers used for creating VMs:<ul id="ul_wx2_svm_2db">
+           <li>hardwire Type: ProLiant DL380p Gen8</li>
+           <li>Number of CPU’s: 2</li>
+           <li>CPU Type: Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz with 8 Cores</li>
+           <li>RAM: 128 GB</li>
+           <li>Hypervisor: ESXi 6.5</li>
+          </ul><note>CPU locking is ensured in all the VM configuration.</note></p><p><uicontrol>IP
+           requirements</uicontrol><ol id="ol_xyk_grj_pdb">
+           <li>For HA deployment, two additional floating IPs are require for the following IPs:<ul
+             id="ul_mjf_dgt_jdb">
+             <li>Virtual_IP - Used for pacemaker</li>
+             <li>Delegate_IP - Used for database connection and replication</li>
+            </ul></li>
+          </ol></p></entry>
+        <entry>
+         <p>HOCOE version JA286-15048 (RHEL 7.5 - 64 Bit)</p>
+        </entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </table></li>
+   <li>For required dependency packages for standalone and HA, see the respective RTMS dependency
+    packages section.</li>
+   <li>The following table summarizes the Linux Redhat configuration information:<table
+     id="table_xbv_tmj_qv">
+     <title>Disk requirement</title>
+     <tgroup cols="3">
+      <colspec colnum="1" colname="c1" colwidth="3.42*"/>
+      <colspec colnum="2" colname="c2" colwidth="1*"/>
+      <colspec colnum="3" colname="c3" colwidth="1.18*"/>
+      <thead>
+       <row>
+        <entry>Filesystem</entry>
+        <entry>Size</entry>
+        <entry>Mounted on</entry>
+       </row>
+      </thead>
+      <tbody>
+       <row>
+        <entry><codeph>/dev/mapper/VolGroup00-root_vol</codeph></entry>
+        <entry>9.9 GB</entry>
+        <entry><codeph>/</codeph></entry>
+       </row>
+       <row>
+        <entry><codeph>/dev/mapper/VolGroup00-home_vol</codeph></entry>
+        <entry>4.0 GB</entry>
+        <entry><codeph>/home</codeph></entry>
+       </row>
+       <row>
+        <entry><codeph>/dev/mapper/VolGroup00-opt_vol</codeph></entry>
+        <entry>4.0 GB</entry>
+        <entry><codeph>/opt</codeph></entry>
+       </row>
+       <row>
+        <entry><codeph>/dev/mapper/VolGroup00-tmp_vol</codeph></entry>
+        <entry>2.0 GB</entry>
+        <entry><codeph>/tmp</codeph></entry>
+       </row>
+       <row>
+        <entry><codeph>/dev/mapper/VolGroup00-var_vol</codeph></entry>
+        <entry>1020 GB</entry>
+        <entry>/var</entry>
+       </row>
+       <row>
+        <entry><codeph>/dev/mapper/VolGroup00-var_vol</codeph></entry>
+        <entry>152 GB</entry>
+        <entry><codeph>/var/crash</codeph></entry>
+       </row>
+       <row>
+        <entry><codeph>/dev/mapper/VolGroup00-var_vol</codeph></entry>
+        <entry>1.0 GB</entry>
+        <entry><codeph>/var/log/audit</codeph></entry>
+       </row>
+      </tbody>
+     </tgroup>
+    </table></li>
+  </ul>
+  <section><uicontrol>BIOS Workload Settings</uicontrol><p>Prior to installation of the RTMS VNF on
+    a set of compute nodes, verify that the HPE Power Regulator settings on each compute node is set
+    to <uicontrol>Static High Performance Mode</uicontrol>.</p><p>HPE servers have a HPE Power
+    Regulator BIOS level setting that control the frequency of the processor. The default setting is
+     <uicontrol>Dynamic Power Saving Mode</uicontrol> which lowers the CPU frequency in the interest
+    of decreasing power consumption. This can result in lower than expected VM performance. since
+    the CPU is not operating at full speed. For many Linux type applications, where latency is not a
+    factor, this may be appropriate. However, for RTMS, where execution latency is critical to
+    capacity, this is an major issue because, it impacts the capacity of the solution. The
+     <uicontrol>Static High Performance Mode</uicontrol> setting causes the CPU to operate at max
+    frequency and is the industry recommended setting for applications that have high capacity or
+    low latency needs.</p><p>For non-HPE compute node hardwire, that manufacturer’s configuration
+    settings must be checked to see, if a similar setting exists and the equivalent change to a
+     <uicontrol>High Performance</uicontrol> value made.</p></section>
+ </conbody>
+</concept>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_gvy_yhz_4r">
+  <title>NSK</title>
+  <shortdesc></shortdesc>
+  <prolog>
+    <author/>
+    <metadata>
+      <prodinfo>
+        <prodname/>
+        <vrmlist>
+          <vrm version=""/>
+        </vrmlist>
+        <component/>
+        <featnum/>
+      </prodinfo>
+    </metadata>
+  </prolog>
+  <refbody>
+    <section>
+      <table frame="all" rowsep="1" colsep="1" id="table_oy3_jwm_2db">
+        <title>OS version</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Series name</entry>
+              <entry>Version number</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>NB series</entry>
+              <entry>J06.18.01</entry>
+            </row>
+            <row>
+              <entry>NS series</entry>
+              <entry>H06.29.00</entry>
+            </row>
+            <row>
+              <entry>NX Series</entry>
+              <entry>L15.02.00</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all" rowsep="1" colsep="1" id="table_zn5_4wm_2db">
+        <title>Telco CLIM OS version</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <thead>
+            <row>
+              <entry>Series</entry>
+              <entry>Version</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>NB series</entry>
+              <entry>ACV</entry>
+            </row>
+            <row>
+              <entry>NX series</entry>
+              <entry>BAC</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <table frame="all" rowsep="1" colsep="1" id="table_j2k_swm_2db">
+        <title>SSH version</title>
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <tbody>
+            <row>
+              <entry>Version procedure</entry>
+              <entry>T9999H06_24FEB2016_comForte_SSH2_0101g</entry>
+            </row>
+            <row>
+              <entry>Version procedure</entry>
+              <entry>T0801H01_04MAR2016_ACA</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+  </refbody>
+</reference>

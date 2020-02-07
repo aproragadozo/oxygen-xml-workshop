@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="section_cwp_vnb_qkb">
+   <title>
+      <ph id="_Toc30015760">Switch Nodes</ph>
+   </title>
+   <body>
+            
+            <p>Thegeneral structure of a SwitchNode definition in a workflow looks like this:</p>
+            <p>&amp;lt;Rule-NodedisablePersistence="true"&gt;</p>
+            <p> &amp;lt;Name&gt;CheckSwitch&amp;lt;/Name&gt;</p>
+            <p> &amp;lt;Action&gt;</p>
+            <p> &amp;lt;Class-Name&gt;</p>
+            <p> com.hp.ov.activator.mwfm.component.builtin.SwitchCase</p>
+            <p> &amp;lt;/Class-Name&gt;</p>
+            <p> &amp;lt;Param name="key" value="value"/&gt;</p>
+            <p> &amp;lt;Param name="case0" value="constant:red"/&gt;</p>
+            <p> &amp;lt;Param name="case1" value="constant:green"/&gt;</p>
+            <p> &amp;lt;/Action&gt;</p>
+            <p> &amp;lt;Switch name="case0"&gt;PutMessage1&amp;lt;/Switch&gt;</p>
+            <p> &amp;lt;Switch name="case1"&gt;PutMessage2&amp;lt;/Switch&gt;</p>
+            <p> &amp;lt;Default&gt;PutMessage3&amp;lt;/Default&gt;</p>
+            <p>&amp;lt;/Rule-Node&gt;</p>
+            <p>Thestructure of a SwitchNode is similar to a Process Node. The distinction is that a
+                Switch Node must have a <i>&amp;lt;Default&gt;</i>
+         <codeph/>tag and a optional number of
+                    <i>&amp;lt;Switch&gt;</i>
+         <codeph/>tag to indicate which node should be processed next
+                in the flow depending on the outcome of the test.</p>
+            <p>Switch nodesmay not have a <i>&amp;lt;Role&gt;</i>
+         <codeph/>tag.</p>
+        </body>
+</topic>

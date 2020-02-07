@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="from_github_source">
+ <title>From GitHub source</title>
+ <shortdesc></shortdesc>
+ <prolog>
+  <author/>
+  <metadata>
+   <prodinfo>
+    <prodname/>
+    <vrmlist>
+     <vrm version=""/>
+    </vrmlist>
+    <component/>
+    <featnum/>
+   </prodinfo>
+  </metadata>
+ </prolog>
+ <refbody><section><lq>
+   <p>contains (total estimate: 10, total remaining: 0, # open issues: 0, # closed issues: 1)</p>
+  </lq><ul id="ul_en2_kqb_qkb">
+   <li><xref href="https://github.hpe.com/hpsa/hpsa/issues/1854" format="html" scope="external"
+     >hpsa/hpsa#1854</xref> [T2 - Enhancement] (10 / 0) <i>Create a custom Wildfly login module
+     using Elytron</i></li>
+  </ul><p>Discussions with the Vivo project show that there are customer who either have no central user
+   directory or where SA/SD has no network access to that central user directory.</p><p>The situation for Vivo looks as shown below please note that users are authenticated against
+   the SA DB in <b>production</b> today (!!!), in other words the two lines having a red box are
+    <b>not</b> in place:</p><image href="../img/pic1.png" id="image_qtp_4qb_qkb"/><p>Apparently the majority of SA customers use the SA DB to authenticate users. That was a
+   surprise to me.</p><p>If we now look at SD, we see a new prerequisite: SAML. If more customers are in a situation
+   like Vivo we will face issues with this dependency:</p><image href="../img/pic2.png" id="image_l2b_qqb_qkb"/><p>Projects can implement their own authentication modules in SA. That's great and this will most
+   probably be done in Vivo for TACACS+.</p><p>The remaining issue is UOC which needs a SAML IdP we do not provide and apparently many
+   customers do not yet have. The proposal is to provide a SAML IdP as part of SD for UOC and have
+   that SAML IdP authenticate users against the SA DB.</p><p>We get to the scope of this issue, sorry about the long intro:</p><ol id="ol_hn2_kqb_qkb">
+   <li>Document and support enabling PicketLink (and maybe later Keycloak because PIcketLink was
+    merged into Keycloak) in Wildfly of SA. Both PicketLink and Keycloak are SAML IdP's</li>
+   <li>Implement an authentication module for PicketLink which authenticates users against SA</li>
+   <li>(2) Needs to be done in a way any authentication module configured SA will be used, e.g.
+    Local DB or TACACS</li>
+  </ol><p>Visualized:</p><pre><codeblock>+----------+
+|          |    SAML
+|  UOC UI  +---------+
+|          |         |
++----------+       +-v--------+            +---------+           +--------------+
+                   |          |    RMI     | HPSA    |  TACACS+  | TACACS+ Srv  |
+                   |PicketLink+------------> Auth    |-----------> Auth         +
+                   | (in SA)  |            | Modules |           | Module       |
+                   +-^--------+            +---------+           +--------------+
+                                                |
+                                                |            +-----------------+ 
+                                                |------------> Auth. Module 2  |
+                                                |            +-----------------+
+                                                |
+                                                |            +-----------------+
+                                                |------------> Auth. Module 3  |
+                                                |            +-----------------+
+                                                |                    ...
+                                                |            +-----------------+
+                                                |------------> Auth. Module N  |
+                                                             +-----------------+
+</codeblock></pre><p>Already discussed with <xref href="https://github.hpe.com/cerro-lozano" format="html"
+    scope="external">@cerro-lozano</xref> and <xref href="https://github.hpe.com/jane-koenigsfeldt"
+    format="html" scope="external">@jane-koenigsfeldt</xref>, making <xref
+    href="https://github.hpe.com/thomas-schmal" format="html" scope="external"
+   >@thomas-schmal</xref>, <xref href="https://github.hpe.com/jens-markussen" format="html"
+    scope="external">@jens-markussen</xref> and <xref
+    href="https://github.hpe.com/natalia-fernandez-ramos" format="html" scope="external"
+    >@natalia-fernandez-ramos</xref> aware</p><p/></section></refbody>
+</reference>
