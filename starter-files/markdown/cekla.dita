@@ -7,6 +7,9 @@
         <?oxy_insert_start author="BalázsBujna" timestamp="20200206T135618+0100"?>
         <p>This file only exists to demonstrate that .dita and .md files may be freely mixed below
             the same .ditamap.</p>
+        <codeblock>function foo() {
+    return "dfghjkl";
+}</codeblock>
         <?oxy_insert_end?>
     </body>
 </topic>
